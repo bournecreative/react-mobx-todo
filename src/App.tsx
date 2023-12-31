@@ -1,8 +1,5 @@
 import { TodoInput } from "./Todo/TodoInput";
 import { TodoList } from "./Todo/TodoList";
-import TodoStore from "./stores/TodoStore";
-
-const todos = new TodoStore();
 
 const App = () => {
   return (
@@ -11,8 +8,8 @@ const App = () => {
         React Todo List with Mobx state management
       </h1>
       <p className="mb-8">Also using Tailwind css for styling</p>
-      <TodoInput todos={todos} />
-      <TodoList todos={todos} />
+      <TodoInput />
+      <TodoList />
     </div>
   );
 };

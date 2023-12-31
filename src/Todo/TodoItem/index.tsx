@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { observer } from "mobx-react-lite";
-import TodoStore, { Todo } from "../../stores/TodoStore";
+import { TodoContext } from "../../context/TodoContext";
+import { Todo } from "../../stores/TodoStore";
 
-export const TodoItem = observer(({ todos }: { todos: TodoStore }) => {
+export const TodoItem = observer(() => {
+  const { todos } = useContext(TodoContext);
+
   const handleDelete = (todo: Todo) => {
     todos.remove(todo);
   };

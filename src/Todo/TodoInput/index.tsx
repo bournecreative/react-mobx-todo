@@ -1,6 +1,8 @@
-import TodoStore from "../../stores/TodoStore";
+import { useContext } from "react";
+import { TodoContext } from "../../context/TodoContext";
 
-export const TodoInput = ({ todos }: { todos: TodoStore }) => {
+export const TodoInput = () => {
+  const { todos } = useContext(TodoContext);
   const handleAdd = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     const formElement = e.target as HTMLFormElement;
