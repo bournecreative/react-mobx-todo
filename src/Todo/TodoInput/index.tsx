@@ -13,14 +13,14 @@ export const TodoInput = () => {
   };
 
   return (
-    <form onSubmit={handleAdd}>
+    <form onSubmit={handleAdd} className="flex flex-wrap justify-center">
       <input
         className="rounded py-1.5 px-7 border text-gray-700 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6"
         name="todo-input"
         placeholder="Add new todo"
       />
       <button
-        className="rounded border-1 border-slate-600 text-gray-500  py-1.5 px-5 ml-12 text-center bg-sky-300 hover:bg-sky-500 hover:text-white"
+        className="text-nowrap rounded border-1 border-slate-600 text-gray-500 py-1.5 px-5 text-center bg-sky-300 hover:bg-sky-500 hover:text-white ml-4 md:ml-12"
         type="submit"
       >
         Add Todo
